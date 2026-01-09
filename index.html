@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trang của Lee</title>
+  <title>Lee | Trang cá nhân</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="container">
+  <!-- MENU -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">Lee</a>
+      <div class="nav-links">
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- PHẦN ĐẦU TRANG -->
+  <div id="top" class="container">
+
+    <!-- HERO -->
     <header class="hero">
       <div class="hero-text">
         <p class="tag">👋 Xin chào</p>
-        <h1>Trang của Lee<h1>Lee</h1>
-<p class="subtitle">
-  Chào mừng bạn đến với không gian cá nhân của mình ✨  
-  Nơi mình chia sẻ sở thích, mục tiêu và hành trình học tập.
-</p>
-
+        <h1>Trang của Lee</h1>
+        <p class="subtitle">
+          Chào mừng bạn đến với không gian cá nhân của mình ✨
+          Nơi mình chia sẻ sở thích, mục tiêu và hành trình học web.
+        </p>
 
         <div class="buttons">
           <a class="btn primary" href="https://google.com" target="_blank" rel="noopener">
@@ -30,23 +41,23 @@
         </div>
       </div>
 
+      <!-- 2) Ảnh đại diện -->
       <img
         class="avatar"
         src="https://picsum.photos/800/600"
-        alt="Ảnh đại diện"
+        alt="Ảnh đại diện của Lee"
         loading="lazy"
       />
     </header>
 
-    <!-- NỘI DUNG CHÍNH -->
     <main>
 
       <!-- GIỚI THIỆU -->
       <section class="card" id="about">
         <h2>Giới thiệu</h2>
         <p>
-          Mình tên là <b>Lee</b>.
-          Đây là trang cá nhân nơi mình chia sẻ thông tin và sở thích của bản thân.
+          Mình là <b>Lee</b>. Mình đang học lập trình web và làm trang này để luyện tập,
+          đồng thời ghi lại những điều mình học được.
         </p>
       </section>
 
@@ -55,20 +66,48 @@
         <section class="card">
           <h2>Sở thích</h2>
           <ul>
-            <li>Nghe nhạc</li>
-            <li>Chơi game</li>
-            <li>Đọc sách</li>
+            <li>🎵 Nghe nhạc để thư giãn</li>
+            <li>🎮 Chơi game giải trí</li>
+            <li>📚 Đọc sách, học điều mới</li>
           </ul>
         </section>
 
         <section class="card">
           <h2>Mục tiêu</h2>
           <ol>
-            <li>Phát triển bản thân</li>
-            <li>Học thêm kỹ năng mới</li>
-            <li>Xây dựng trang web cá nhân hoàn chỉnh</li>
+            <li>Hoàn thiện web cơ bản (HTML/CSS)</li>
+            <li>Tự làm website cá nhân</li>
+            <li>Không ngừng phát triển bản thân</li>
           </ol>
         </section>
+      </section>
+
+      <!-- 4) KỸ NĂNG -->
+      <section class="card" id="skills">
+        <h2>Kỹ năng</h2>
+
+        <div class="skill">
+          <div class="skill-top">
+            <span>HTML</span><span>70%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top">
+            <span>CSS</span><span>55%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:55%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-top">
+            <span>JavaScript</span><span>30%</span>
+          </div>
+          <div class="bar"><div class="bar-fill" style="width:30%"></div></div>
+        </div>
+
+        <p class="tip">📌 Bạn có thể đổi % theo trình độ của bạn.</p>
       </section>
 
       <!-- GHI CHÚ -->
@@ -85,35 +124,23 @@
         <div class="contact-grid">
           <a class="contact-item" href="https://facebook.com" target="_blank" rel="noopener">
             <span class="icon">📘</span>
-            <span>
-              <b>Facebook</b><br />
-              <small>@ten-facebook-cua-ban</small>
-            </span>
+            <span><b>Facebook</b><br><small>@ten-facebook-cua-ban</small></span>
           </a>
 
           <a class="contact-item" href="https://zalo.me" target="_blank" rel="noopener">
             <span class="icon">💬</span>
-            <span>
-              <b>Zalo</b><br />
-              <small>+84 0xx xxx xxxx</small>
-            </span>
+            <span><b>Zalo</b><br><small>+84 0xx xxx xxxx</small></span>
           </a>
 
           <a class="contact-item" href="mailto:yourname@gmail.com">
             <span class="icon">✉️</span>
-            <span>
-              <b>Email</b><br />
-              <small>yourname@gmail.com</small>
-            </span>
+            <span><b>Email</b><br><small>yourname@gmail.com</small></span>
           </a>
         </div>
-
-        <p class="tip">📌 Hãy thay link Facebook/Zalo/Email thành thông tin thật của bạn.</p>
       </section>
 
     </main>
 
-    <!-- CHÂN TRANG -->
     <footer class="footer">
       <small>© 2026 – Trang cá nhân của Lee</small>
     </footer>
@@ -121,4 +148,3 @@
   </div>
 </body>
 </html>
-

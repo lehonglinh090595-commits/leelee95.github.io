@@ -26,10 +26,51 @@ body{
   line-height: 1.6;
 }
 
+/* ===== Top Nav (3) ===== */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.65);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.nav-links a{
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover{
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255,255,255,.04);
+}
+
 /* ===== Layout ===== */
 .container{
   max-width: 980px;
-  margin: 40px auto;
+  margin: 26px auto 40px;
   padding: 0 18px 40px;
 }
 
@@ -136,6 +177,32 @@ main{ margin-top: 18px; }
 ul, ol{ margin: 0; padding-left: 18px; color: var(--muted); }
 li{ margin: 6px 0; }
 
+/* ===== (4) Skills ===== */
+.skill{ margin-top: 14px; }
+.skill-top{
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.bar-fill{
+  height: 100%;
+  background: rgba(91,140,255,.55);
+}
+.tip{
+  margin-top: 12px;
+  color: rgba(232,238,252,.65);
+  font-size: 14px;
+}
+
 /* ===== Contact ===== */
 .muted{
   color: var(--muted);
@@ -169,9 +236,7 @@ li{ margin: 6px 0; }
   border-color: rgba(255,255,255,.18);
 }
 
-.contact-item small{
-  color: var(--muted);
-}
+.contact-item small{ color: var(--muted); }
 
 .icon{
   width: 42px;
@@ -182,12 +247,6 @@ li{ margin: 6px 0; }
   background: rgba(91,140,255,.15);
   border: 1px solid rgba(91,140,255,.35);
   font-size: 20px;
-}
-
-.tip{
-  margin-top: 12px;
-  color: rgba(232,238,252,.65);
-  font-size: 14px;
 }
 
 /* ===== Footer ===== */
@@ -204,39 +263,4 @@ li{ margin: 6px 0; }
   .avatar{ height: 220px; }
   .grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
-}
-/* ===== Tăng độ dễ đọc ===== */
-body {
-  font-size: 16px;
-}
-
-/* ===== Canh giữa nội dung chính ===== */
-.container {
-  margin-top: 60px;
-}
-
-/* ===== Tiêu đề đẹp hơn ===== */
-h1, h2 {
-  letter-spacing: 0.3px;
-}
-
-/* ===== Thẻ card mượt hơn ===== */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-}
-
-/* ===== Danh sách gọn hơn ===== */
-ul li, ol li {
-  line-height: 1.8;
-}
-
-/* ===== Footer nhỏ & tinh tế ===== */
-.footer {
-  font-size: 14px;
-  opacity: 0.8;
 }

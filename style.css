@@ -205,3 +205,38 @@ li{ margin: 6px 0; }
   .grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
 }
+/* ===== Tăng độ dễ đọc ===== */
+body {
+  font-size: 16px;
+}
+
+/* ===== Canh giữa nội dung chính ===== */
+.container {
+  margin-top: 60px;
+}
+
+/* ===== Tiêu đề đẹp hơn ===== */
+h1, h2 {
+  letter-spacing: 0.3px;
+}
+
+/* ===== Thẻ card mượt hơn ===== */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* ===== Danh sách gọn hơn ===== */
+ul li, ol li {
+  line-height: 1.8;
+}
+
+/* ===== Footer nhỏ & tinh tế ===== */
+.footer {
+  font-size: 14px;
+  opacity: 0.8;
+}

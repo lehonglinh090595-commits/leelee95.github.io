@@ -152,3 +152,188 @@ li{ margin: 6px 0; }
   .avatar{ height: 220px; }
   .grid{ grid-template-columns: 1fr; }
 }
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang của Lee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- PHẦN ĐẦU TRANG -->
+    <header class="hero">
+      <div class="hero-text">
+        <p class="tag">👋 Xin chào</p>
+        <h1>Trang của Lee</h1>
+        <p class="subtitle">Chào mừng bạn đến với trang cá nhân của mình.</p>
+
+        <div class="buttons">
+          <a class="btn primary" href="https://google.com" target="_blank" rel="noopener">
+            Mở Google
+          </a>
+          <a class="btn" href="#about">Giới thiệu</a>
+          <a class="btn" href="#contact">Liên hệ</a>
+        </div>
+      </div>
+
+      <img
+        class="avatar"
+        src="https://picsum.photos/800/600"
+        alt="Ảnh đại diện"
+        loading="lazy"
+      />
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main>
+
+      <!-- GIỚI THIỆU -->
+      <section class="card" id="about">
+        <h2>Giới thiệu</h2>
+        <p>
+          Mình tên là <b>Lee</b>.
+          Đây là trang cá nhân nơi mình chia sẻ thông tin và sở thích của bản thân.
+        </p>
+      </section>
+
+      <!-- SỞ THÍCH + MỤC TIÊU -->
+      <section class="grid">
+        <section class="card">
+          <h2>Sở thích</h2>
+          <ul>
+            <li>Nghe nhạc</li>
+            <li>Chơi game</li>
+            <li>Đọc sách</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Mục tiêu</h2>
+          <ol>
+            <li>Phát triển bản thân</li>
+            <li>Học thêm kỹ năng mới</li>
+            <li>Xây dựng trang web cá nhân hoàn chỉnh</li>
+          </ol>
+        </section>
+      </section>
+
+      <!-- GHI CHÚ -->
+      <section class="card">
+        <h2>Ghi chú</h2>
+        <p>Trang web này sẽ tiếp tục được cập nhật và hoàn thiện trong thời gian tới.</p>
+      </section>
+
+      <!-- LIÊN HỆ -->
+      <section class="card" id="contact">
+        <h2>Liên hệ</h2>
+        <p class="muted">
+          Bạn có thể liên hệ với mình qua các kênh bên dưới:
+        </p>
+
+        <div class="contact-grid">
+          <!-- Đổi link + thông tin của bạn ở đây -->
+          <a class="contact-item" href="https://facebook.com" target="_blank" rel="noopener">
+            <span class="icon">📘</span>
+            <span>
+              <b>Facebook</b><br>
+              <small>@ten-facebook-cua-ban</small>
+            </span>
+          </a>
+
+          <a class="contact-item" href="https://zalo.me" target="_blank" rel="noopener">
+            <span class="icon">💬</span>
+            <span>
+              <b>Zalo</b><br>
+              <small>+84 0xx xxx xxxx</small>
+            </span>
+          </a>
+
+          <a class="contact-item" href="mailto:yourname@gmail.com">
+            <span class="icon">✉️</span>
+            <span>
+              <b>Email</b><br>
+              <small>yourname@gmail.com</small>
+            </span>
+          </a>
+        </div>
+
+        <p class="tip">
+          📌 Hãy thay link Facebook/Zalo/Email trong code thành thông tin thật của bạn.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer class="footer">
+      <small>© 2026 – Trang cá nhân của Lee</small>
+    </footer>
+
+  </div>
+</body>
+</html>
+/* ===== Contact ===== */
+.muted{
+  color: var(--muted);
+  margin-top: -6px;
+  margin-bottom: 12px;
+}
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contact-item{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,.04);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.contact-item:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.18);
+}
+
+.contact-item small{
+  color: var(--muted);
+}
+
+.icon{
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(91,140,255,.15);
+  border: 1px solid rgba(91,140,255,.35);
+  font-size: 20px;
+}
+
+.tip{
+  margin-top: 12px;
+  color: rgba(232,238,252,.65);
+  font-size: 14px;
+}
+
+/* Contact responsive */
+@media (max-width: 820px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
